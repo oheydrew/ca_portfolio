@@ -1,0 +1,138 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+    margin: 0;
+
+    /* sizes border-box to include borders in sizing */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {    
+    /* color variables */
+    --color-bg-main: #1F1F1F;
+    --color-bg-alt: #4F4F4F;
+    --color-font-main: #F2F2F2;
+    --color-font-dull: #BDBDBD;
+    --color-links-main: #47A0FF;
+    --color-links-dull: #5F91C7;
+    --color-highlight-main: #C52233;
+
+    /* padding & layout variables */
+    --padding-top-bottom: 1.5em 0 1.5em 0;
+    --nav-height: 12.5vh;
+    --article-height: 90vh;
+}
+
+calc(100vh-var(--nav-height))
+
+/* Body & Header defaults */
+body {
+    background-color: var(--color-bg-main);
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17;
+    line-height: 140%;
+    color: var(--color-font-main);
+}
+
+/* Main Header */
+h1 {
+    text-align: right;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.7em;
+    line-height: 110%;
+}
+
+/* Section Header */
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    line-height: 110%;
+}
+
+/* Media Queries */
+@media (min-width: 400px) {
+    content {
+
+    }
+    
+    aside {
+
+    }
+}
+
+@media (min-width: 760px) {
+    content {
+        max-width: 50%;
+    }
+    
+    aside {
+        max-width: 50%;
+    }
+}
+
+/* Main container: W/H 100VW/VM, 2 section grid */
+.container {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: auto var(--nav-height);
+    grid-template-areas: 
+        ". main ."
+        "nav nav nav";
+    text-align: left;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--color-bg-main);
+}
+
+/* Main and Nav are our Container Grid components */
+main {
+    grid-area: main;
+    background-color: red;
+    overflow: auto;
+}
+
+nav {
+    grid-area: nav;
+    background-color:blue;
+}
+
+/* Generic Header padding */
+header {
+    padding: var(--padding-top-bottom);
+}
+
+section {
+    min-height: var(--article-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header.header-section {
+    background-color: orange;
+}
+
+article {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+content {
+    width: 100%;
+    background-color: green;
+}
+
+aside {
+    width: 100%;
+    background-color: purple;
+}
