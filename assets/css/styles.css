@@ -10,7 +10,7 @@ font-family: 'Ubuntu', sans-serif; */
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+                                    /* :root Global variables */
 :root {    
     /* color variables */
     --color-bg-main: #1F1F1F;
@@ -28,18 +28,17 @@ font-family: 'Ubuntu', sans-serif; */
     --article-height: 90vh;
 }
 
-/* Body & Header defaults */
+                                    /* Body & font defaults */
 body {
     background-color: var(--color-bg-main);
 
     font-family: 'Ubuntu', sans-serif;
-    font-size: 17;
+    font-size: 16px;
     line-height: 140%;
     color: var(--color-font-main);
-
 }
 
-/* Links! http://bit.ly/1PKfDG1 */
+                              /* Links! http://bit.ly/1PKfDG1 */
 a {
     text-decoration: none;
 }
@@ -56,27 +55,75 @@ a:hover {
     color: var(--color-highlight-main);
 }
 
+                                /* Content & Button styling */
+.project-img {
+    width: 80%;
+    border: .2em solid var(--color-highlight-main);
+    border-radius: 4px;
+}
 
+button {
+    display: inline-block;
+    border: 0px solid black;
+    border-radius: 6px;
+    background-color: var(--color-links-main);
+    padding: 0;
+    overflow: hidden;
 
-/* Main Header */
-h1 {
-    text-align: right;
+    font-size: .9em;
+    font-weight: bold;
+    color: var(--color-bg-main);
+}
+
+button:link {
+    color: var(--color-bg-main);
+}
+
+button:hover {
+    background-color: var(--color-highlight-main);
+}
+
+.btn-menu {
+    width: 22vw;
+    max-width: 100px;
+    height: 40px;
+}
+
+                                               /* Headers! */
+
+/* Generic Header padding */
+header {
+    padding: var(--padding-top-bottom);
+}
+
+h1 { /* Splash Header */
     font-family: 'Pacifico', cursive;
     font-size: 2.7em;
     line-height: 110%;
+    font-weight: normal;    
+    text-align: center;
 }
 
-/* Section Header */
-h2 {
+h2 { /* Main Header */
+    font-family: 'Pacifico', cursive;
+    font-size: 2.7em;
+    line-height: 110%;
+    font-weight: normal;
+    text-align: right;
+}
+
+h3 { /* Section Header */
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4em;
+    font-weight: normal !important;
+    line-height: 110%;
+
+    /* move it to the side magic */
     position: relative;
     left: -20px;
-    
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5em;
-    line-height: 110%;
 }
 
-/* Media Queries */
+                                            /* Media Queries */
 @media (min-width: 400px) {
     content {
 
@@ -97,15 +144,12 @@ h2 {
     }
 }
 
-/* Main container: W/H 100VW/VM, 2 section grid */
+                                        /* Global container: */
+
+/* W/H 100VW/VM, 2 section flex column */ 
 .container {
-    display: grid;
-    grid-template-columns: 10vw auto 10vw;
-    grid-template-rows: auto var(--nav-height);
-    grid-template-areas: 
-        ". main ."
-        "nav nav nav";
-    text-align: left;
+    display: flex;
+    flex-direction: column;
 
     width: 100vw;
     height: 100vh;
@@ -113,29 +157,24 @@ h2 {
     background-color: var(--color-bg-main);
 }
 
-/* Main and Nav are our Container Grid components */
+                                    /* Main, Nav Container */
 main {
-    grid-area: main;
-    background-color: red;
+    flex: 1;
+    padding: 0 10vw 0 10vw;
     overflow: auto;
 }
 
 nav {
-    grid-area: nav;
+    height: var(--nav-height);
     display: flex;
     justify-content: center;
+    align-content: space-between;
     align-items: center;
-    background-color:blue;
 }
 
-/* Generic Header padding */
-header {
-    padding: var(--padding-top-bottom);
-}
+                                /* Section (page) containers */
 
 section {
-    
-    
     min-height: var(--article-height);
 
     display: flex;
@@ -143,10 +182,7 @@ section {
     justify-content: center;
 }
 
-header.header-section {
-    background-color: orange;
-}
-
+/* Article flexbox for responsive jam */
 article {
     display: flex;
     flex: 1;
@@ -154,33 +190,39 @@ article {
     flex-wrap: wrap;
 }
 
+/* flip pics to the right for widescreen */
+article.projects {
+    flex-direction: row-reverse;
+}
+
+/* text mostly */
 content {
     width: 100%;
-    background-color: green;
 
     padding: var(--padding-bottom);
 }
 
+/* images & icons */
 aside {
     text-align: center;
     width: 100%;
-    background-color: purple;
 
     padding: var(--padding-bottom);
 }
 
-/* navigation menu */
+
+                                        /* navigation menu */
 .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    min-width: 300px;
     padding: 0;
 }
+
+/* In line list items (flat row buttons) */
 .navigation > li {
     display: inline-block;
+    margin: 2px;
 }
 
-/* content styling */
-
-.project-img {
-    width: 80%;
-    border: .2em solid var(--color-highlight-main);
-    border-radius: 4px;
-}
