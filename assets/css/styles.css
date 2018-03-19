@@ -23,11 +23,10 @@ font-family: 'Ubuntu', sans-serif; */
 
     /* padding & layout variables */
     --padding-top-bottom: 1.5em 0 1.5em 0;
+    --padding-bottom: 0 0 1.5em 0;
     --nav-height: 12.5vh;
     --article-height: 90vh;
 }
-
-calc(100vh-var(--nav-height))
 
 /* Body & Header defaults */
 body {
@@ -37,7 +36,27 @@ body {
     font-size: 17;
     line-height: 140%;
     color: var(--color-font-main);
+
 }
+
+/* Links! http://bit.ly/1PKfDG1 */
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--color-links-main);
+}
+
+a:visited {
+    color: var(--color-links-main);
+}
+
+a:hover {
+    color: var(--color-highlight-main);
+}
+
+
 
 /* Main Header */
 h1 {
@@ -49,6 +68,9 @@ h1 {
 
 /* Section Header */
 h2 {
+    position: relative;
+    left: -20px;
+    
     font-family: 'Pacifico', cursive;
     font-size: 1.5em;
     line-height: 110%;
@@ -100,6 +122,9 @@ main {
 
 nav {
     grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:blue;
 }
 
@@ -109,6 +134,8 @@ header {
 }
 
 section {
+    
+    
     min-height: var(--article-height);
 
     display: flex;
@@ -130,9 +157,30 @@ article {
 content {
     width: 100%;
     background-color: green;
+
+    padding: var(--padding-bottom);
 }
 
 aside {
+    text-align: center;
     width: 100%;
     background-color: purple;
+
+    padding: var(--padding-bottom);
+}
+
+/* navigation menu */
+.navigation {
+    padding: 0;
+}
+.navigation > li {
+    display: inline-block;
+}
+
+/* content styling */
+
+.project-img {
+    width: 80%;
+    border: .2em solid var(--color-highlight-main);
+    border-radius: 4px;
 }

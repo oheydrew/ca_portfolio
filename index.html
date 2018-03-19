@@ -21,13 +21,13 @@
     <div class="container">
         <main class="container-main">
 
-            <section class="splash">
+            <section id="home" class="splash">
                 <header class="header-main"><h1>splash</h1></header>
                 
 
             </section>
 
-            <section class="about">
+            <section id="about" class="about">
                 <header class="header-main"><h1>about</h1></header>
                 
                 <header class="header-section"><h2>Drew Noll - Junior Dev</h2></header>
@@ -43,34 +43,55 @@
 
             </section>
 
-            <section class="projects">
-                    <header class="header-main"><h1>projects</h1></header>
-                    
-                    <header class="header-section"><h2>Drew Noll - Junior Dev</h2></header>
-    
-                    <article class="container-article">
-                        <content>
-                            <p>Hi! I’m Drew! I‘m a junior software developer and career changer, bringing over a decade of experience as an audio engineer in the events industry. I’m technically minded, motivated and enthusiastic about learning, and I’m excited to be heading out on a new path.</p>
-                            <p></p>
-                            <p>My background in the fast-paced events world has left me with a love of robust, logical systems with reliable troubleshooting methods.</p>
-                        </content>
-                        <aside>Tech Stax</aside>
-                    </article>
-    
-                    <header class="header-section"><h2>Section Header 2!<h2></header>
-                    <article class="container-article">
-                        <content>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque dolores esse, saepe laboriosam maiores exercitationem laudantium quam voluptates dignissimos consequuntur aut sunt sequi et qui asperiores enim, quis distinctio ex?</content>
-                        <aside>Aside 2!</aside>
-                    </article>
+            <section id="projects" class="projects">
+                <header class="header-main"><h1>projects</h1></header>
+                
+                <header class="header-section"><h2>~/pixelhat/</h2></header>
+                <article class="container-article">
+                    <aside><img src="assets/images/pixelhat.png" class="project-img"></aside>
+                    <content>
+                        <p>Hi! I’m Drew! I‘m a junior software developer and career changer, bringing over a decade of experience as an audio engineer in the events industry. I’m technically minded, motivated and enthusiastic about learning, and I’m excited to be heading out on a new path.</p>
+                        <p></p>
+                        <p>My background in the fast-paced events world has left me with a love of robust, logical systems with reliable troubleshooting methods.</p>
+                    </content>
+                </article>
 
-                    <header class="header-section"><h2>Section Header 2!<h2></header>
-                    <article class="container-article">
-                        <content>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque dolores esse, saepe laboriosam maiores exercitationem laudantium quam voluptates dignissimos consequuntur aut sunt sequi et qui asperiores enim, quis distinctio ex?</content>
-                        <aside>Aside 2!</aside>
-                    </article>
-                </section>
+                <header class="header-section"><h2>Section Header 2!<h2></header>
+                <article class="container-article">
+                    <content>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque dolores esse, saepe laboriosam maiores exercitationem laudantium quam voluptates dignissimos consequuntur aut sunt sequi et qui asperiores enim, quis distinctio ex?</content>
+                    <aside>Aside 2!</aside>
+                </article>
+
+                <header class="header-section"><h2>Section Header 2!<h2></header>
+                <article class="container-article">
+                    <content>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque dolores esse, saepe laboriosam maiores exercitationem laudantium quam voluptates dignissimos consequuntur aut sunt sequi et qui asperiores enim, quis distinctio ex?</content>
+                    <aside>Aside 2!</aside>
+                </article>
+            </section>
+
+            <section id="contact" class="contact">
+                <header class="header-main"><h1>contact</h1></header>
+                
+                <header class="header-section"><h2>Get in touch!</h2></header>
+                <article class="container-article">
+                    <content>
+                        <p>Hi! I’m Drew! I‘m a junior software developer and career changer, bringing over a decade of experience as an audio engineer in the events industry. I’m technically minded, motivated and enthusiastic about learning, and I’m excited to be heading out on a new path.</p>
+                        <p></p>
+                        <p>My background in the fast-paced events world has left me with a love of robust, logical systems with reliable troubleshooting methods.</p>
+                    </content>
+                    <aside>Tech Stax</aside>
+                </article>
+
+            </section>
         </main>
-        <nav class="nav-container">NAV</nav>
+        <nav class="nav-container">
+            <ul class="navigation">
+                <li id="list-home" class="list"><a href="#home">home</a></li>
+                <li id="list-about" class="list"><a href="#about">about</a></li>
+                <li id="list-projects" class="list"><a href="#projects">projects</a></li>
+                <li id="list-contact" class="list"><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
     </div>
 </body>
 </html>
