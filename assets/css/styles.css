@@ -13,7 +13,7 @@ font-family: 'Ubuntu', sans-serif; */
                                     /* :root Global variables */
 :root {    
     /* color variables */
-    --color-bg-main: rgb(33, 44, 61);
+    --color-bg-main: #21242B;
     --color-bg-alt: #4F4F4F;
     --color-font-main: #F2F2F2;
     --color-font-dull: #BDBDBD;
@@ -22,7 +22,7 @@ font-family: 'Ubuntu', sans-serif; */
     --color-highlight-main: #C52233;
 
     /* padding & layout variables */
-    --padding-top-bottom: 1.0em 0 1.5em 0;
+    --padding-top-bottom: 1.5em 0 1.5em 0;
     --padding-bottom: 0 0 1.5em 0;
     --nav-height: 12.5vh;
     --article-height: 90vh;
@@ -42,7 +42,7 @@ body {
 
     background-color: var(--color-bg-main);
     font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 140%;
     color: var(--color-font-main);
 }
@@ -100,8 +100,8 @@ button {
 }
 
 .btn-menu {
-    width: 22vw;
-    max-width: 100px;
+    width: 20vw;
+    max-width: 90px;
     height: 40px;
     margin: 2px;
 }
@@ -301,9 +301,75 @@ aside {
 }
                                 /* popup navigation menu */
 
-/* .popupcontainer {
+.popupcontainer {
+    position: absolute;
+    bottom: -82.5vh;
+    left: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    height: 50px;
+    min-width: 310px;
+
+    margin: 0;
+    padding: 0 6px 0 10px;
+
+    list-style-type: none;
+    border-radius: 0 6px 6px 0;
+    background-color: var(--color-bg-alt);
+    z-index: 3;
+
+    transform-origin: 0% 0%;
+    transform: translate(-120%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menucheckbox
+{
+    position: absolute;
+    top: 7vh;
+    left: 0px;
+    width: 80px;
+    height: 50px;
+    padding: 0;
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 4;
+    
+    border-radius: 0 6px 6px 0;
+    background-color: var(--color-links-main);
+    color: var(--color-bg-main);
+    font-weight: 700;
+
+    user-select: none;
+}
+
+/* #menucheckbox:hover {
+    background-color: var(--color-highlight-main);
 } */
+
+#menucheckbox input {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    display: block;
+    width: 80px;
+    height: 50px;
+    
+    opacity: 0;
+    cursor: pointer;
+}
+
+#menucheckbox input:checked ~ ul {
+    transform: none;
+}
+
+
 
                                 /* linear navigation menu */
 
@@ -454,7 +520,7 @@ input:focus, textarea:focus {
     padding: 0 10vw 0 0;
 
     width: 400px;
-    height: 80px;
+    height: 65px;
     background-image: url(/assets/images/headerwave.png);
     background-size: 100% 100%;
 }
