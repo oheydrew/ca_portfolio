@@ -33,7 +33,7 @@ body {
     background-color: var(--color-bg-main);
 
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 140%;
     color: var(--color-font-main);
 }
@@ -64,10 +64,11 @@ a:hover {
 
 button {
     display: inline-block;
-    border: 0px solid black;
+    border: 0px solid;
     border-radius: 6px;
     background-color: var(--color-links-main);
     padding: 0;
+
     overflow: hidden;
 
     font-size: .9em;
@@ -75,26 +76,51 @@ button {
     color: var(--color-bg-main);
 }
 
-button:link {
+/* button:link {
     color: var(--color-bg-main);
+} */
+
+.btn-menu:hover {
+    background-color: var(--color-highlight-main);
 }
 
-button:hover {
-    background-color: var(--color-highlight-main);
+.btn-link:hover {
+    background-color: var(--color-highlight-main); 
 }
 
 .btn-menu {
     width: 22vw;
     max-width: 100px;
     height: 40px;
+    margin: 2px;
 }
 
 .btn-icon {
-    width: 20vw;
-    max-width: 100px;
-    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 18vw;
+    height: 18vw;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 5px;
+    font-size: 3.0em;
 }
 
+/* Horizontal Line */
+.hr { 
+    display: block;
+    align-self: center;
+    width: 80%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    border: 2px solid var(--color-highlight-main);
+} 
+
+                                    /* LAYOUT AND FORMATTING */
                                                /* Headers! */
 
 /* Generic Header padding */
@@ -141,13 +167,20 @@ h3 { /* Section Header */
 }
 
 @media (min-width: 760px) {
+    body {
+        font-size: 18px;
+    }
+    
     content {
         max-width: 50%;
     }
     
     aside {
         max-width: 50%;
+        display: flex;
+        justify-content: flex-end !important;
     }
+    
 }
 
                                         /* Global container: */
@@ -210,7 +243,11 @@ content {
 
 /* images & icons */
 aside {
-    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* text-align: center; */
+
     width: 100%;
 
     padding: var(--padding-bottom);
@@ -218,6 +255,7 @@ aside {
 
 
                                         /* navigation menu */
+
 .navigation {
     list-style-type: none;
     margin: 0;
@@ -227,12 +265,6 @@ aside {
     justify-content: space-between;
     align-content: space-between;
     min-width: 300px;
-    
-}
-
-/* In line list items (flat row buttons) */
-.navigation > li {
-    margin: 2px;
 }
 
                                         /* icon containers */
@@ -246,5 +278,9 @@ aside {
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
-    max-width: 300px;
+    width: 64vw;
+    height: 64vw;
+    max-width: 270px;
+    max-height: 270px;
+
 }
