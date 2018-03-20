@@ -24,8 +24,15 @@ font-family: 'Ubuntu', sans-serif; */
     /* padding & layout variables */
     --padding-top-bottom: 1.5em 0 1.5em 0;
     --padding-bottom: 0 0 1.5em 0;
-    --nav-height: 12.5vh;
-    --article-height: 90vh;
+    /* bottom menu */
+    /* --nav-height: 12.5vh;
+    --article-height: 85vh; */
+    /* top menu */
+    --nav-height: 7.5vh;
+    --article-height: 100vh;
+    /* popup option */
+    /* --nav-height: 0px;
+    --article-height: 100vh; */
 
     /* animation */
     --animtime-splash: 15s;
@@ -200,6 +207,14 @@ h3 { /* Section Header */
 }
 
 @media (min-width: 760px) {
+    /* :root {
+        --nav-height: 0vh;
+    }
+
+    .navigation {
+        opacity: 0;
+    } */
+
     body {
         font-size: 18px;
     }
@@ -234,7 +249,8 @@ h3 { /* Section Header */
 /* W/H 100VW/VM, 2 section flex column */ 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    
 
     width: 100vw;
     height: 100vh;
@@ -247,6 +263,7 @@ main {
     flex: 1;
     padding: 0 10vw 0 10vw;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -303,13 +320,13 @@ aside {
 
 .popupcontainer {
     position: absolute;
-    bottom: -82.5vh;
-    left: 0px;
+    top: -50px;
+    left: 0;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40vw;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
     height: 50px;
     min-width: 310px;
 
@@ -317,13 +334,30 @@ aside {
     padding: 0 6px 0 10px;
 
     list-style-type: none;
-    border-radius: 0 6px 6px 0;
-    background-color: var(--color-bg-alt);
+    /* border-radius: 0 0 6px 6px;
+    background-color: var(--color-bg-main); */
     z-index: 3;
 
     transform-origin: 0% 0%;
-    transform: translate(-120%, 0);
+    /* transform: translate(-120%, 0); */
+    transform: translate(0, -110%);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.navicontainer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    list-style-type: none;
+    border-radius: 0 0 6px 6px;
+    background-color: var(--color-bg-main);
+    z-index: 3;
+
+    margin: 0;
+    padding: 0;
+
 }
 
 #menucheckbox
@@ -365,7 +399,7 @@ aside {
     cursor: pointer;
 }
 
-#menucheckbox input:checked ~ ul {
+#menucheckbox input:checked ~ div {
     transform: none;
 }
 
@@ -382,6 +416,8 @@ aside {
     justify-content: space-between;
     align-content: space-between;
     min-width: 300px;
+
+    /* opacity: 0; */
 }
 
                                         /* icon containers */

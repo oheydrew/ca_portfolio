@@ -41,17 +41,19 @@
 </head>
 <body>
     <div class="container">
-
+<!-- 
         <div id="menucheckbox">
             <input type="checkbox" />
             menu
-            <ul class="popupcontainer">
-                <li id="list-home" class="list"><a href="#home"><button class="btn-menu">home</button></a></li>
-                <li id="list-about" class="list"><a href="#about"><button class="btn-menu">about</button></a></li>
-                <li id="list-projects" class="list"><a href="#projects"><button class="btn-menu">projects</button></a></li>
-                <li id="list-contact" class="list"><a href="#contact"><button class="btn-menu">contact</button></a></li>
-            </ul>
-        </div>
+            <div class="popupcontainer">
+                <ul class="navicontainer">
+                    <li id="list-home" class="list"><a href="#home"><button class="btn-menu">home</button></a></li>
+                    <li id="list-about" class="list"><a href="#about"><button class="btn-menu">about</button></a></li>
+                    <li id="list-projects" class="list"><a href="#projects"><button class="btn-menu">projects</button></a></li>
+                    <li id="list-contact" class="list"><a href="#contact"><button class="btn-menu">contact</button></a></li>
+                </ul>
+            </div>
+        </div> -->
 
         <main class="container-main">
             <section id="home" class="splash">
@@ -147,7 +149,7 @@
                     <div class="h3container">
                         <div class="waveheader">
                             <div>
-                                <h2>projects</h2>
+                                <h2>contact</h2>
                             </div>
                         </div>
                     </div>
@@ -163,7 +165,7 @@
                         </ul>
                     </aside>
                     <content>
-                        <form action="/pages/contact.html" method="get">
+                        <form name="contact" method="POST" netlify>
                             <input type="text" name="full-name" placeholder="name ?" />
                             <br/>
                             <input type="email" name="email" placeholder="email ?" />
