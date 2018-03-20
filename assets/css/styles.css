@@ -13,7 +13,7 @@ font-family: 'Ubuntu', sans-serif; */
                                     /* :root Global variables */
 :root {    
     /* color variables */
-    --color-bg-main: #1F1F1F;
+    --color-bg-main: rgb(33, 44, 61);
     --color-bg-alt: #4F4F4F;
     --color-font-main: #F2F2F2;
     --color-font-dull: #BDBDBD;
@@ -22,10 +22,13 @@ font-family: 'Ubuntu', sans-serif; */
     --color-highlight-main: #C52233;
 
     /* padding & layout variables */
-    --padding-top-bottom: 1.5em 0 1.5em 0;
+    --padding-top-bottom: 1.0em 0 1.5em 0;
     --padding-bottom: 0 0 1.5em 0;
     --nav-height: 12.5vh;
     --article-height: 90vh;
+
+    /* animation */
+    --animtime-splash: 15s;
 }
 
                                     /* Body & font defaults */
@@ -167,7 +170,7 @@ h2 { /* Main Header */
     font-size: 2.7em;
     line-height: 110%;
     font-weight: normal;
-    text-align: right;
+    /* text-align: right; */
 }
 
 h3 { /* Section Header */
@@ -333,4 +336,95 @@ textarea, input {
     /* hacks right side of box into place */
     position: relative;
     right: -.25em;
+}
+
+                                /* Splash Sinewave Animation */
+
+.wavecontainer {
+    position: relative;
+    left: -10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 300px;
+    width: 100vw;
+
+    z-index: 0;
+    overflow: hidden;
+}
+
+.splashhead {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0px 0px 10px var(--color-bg-main);
+}
+
+.wave {
+  position: absolute;
+  background: url(/assets/images/splashwave/splashwave-blue.svg)  repeat-x;
+  width: 6400px;
+  height: 210px;
+  animation: sineanim calc(var(--animtime-splash) * 1.0) linear infinite;
+  filter: drop-shadow( 20px 0px 6px #456990 );
+  z-index: 1;
+}
+
+.wave2 {
+  position: absolute;
+  background: url(/assets/images/splashwave/splashwave-grey.svg) repeat-x;
+  width: 6400px;
+  height: 210px;
+  animation: sineanim calc(var(--animtime-splash) * 0.666) linear infinite;
+  filter: drop-shadow( 15px 0px 3px #BDBDBD );
+  opacity: .4;
+}
+
+.wave3 {
+  position: absolute;
+  background: url(/assets/images/splashwave/splashwave-red.svg) repeat-x;
+  width: 6400px;
+  height: 210px;
+  animation: sineanim calc(var(--animtime-splash) * (0.333)) linear infinite;
+  filter: drop-shadow( 20px 0px 5px #C52233 );
+  opacity: .6;
+  
+}
+
+@keyframes sineanim {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+                                    /* WaveHeader Graphic */
+
+.h3container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 90vw;
+    height: 90px;
+
+    z-index: 0;
+    overflow: hidden;
+}
+
+.waveheader {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10vw 0 0;
+
+    width: 400px;
+    height: 80px;
+    background-image: url(/assets/images/headerwave.png);
+    background-size: 100% 100%;
 }
