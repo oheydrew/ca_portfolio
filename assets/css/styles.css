@@ -29,9 +29,14 @@ font-family: 'Ubuntu', sans-serif; */
 }
 
                                     /* Body & font defaults */
-body {
-    background-color: var(--color-bg-main);
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: var(--color-bg-main);
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     line-height: 140%;
@@ -76,15 +81,15 @@ button {
     color: var(--color-bg-main);
 }
 
-/* button:link {
-    color: var(--color-bg-main);
-} */
-
 .btn-menu:hover {
     background-color: var(--color-highlight-main);
 }
 
 .btn-link:hover {
+    background-color: var(--color-highlight-main); 
+}
+
+.btn-submit:hover {
     background-color: var(--color-highlight-main); 
 }
 
@@ -106,6 +111,27 @@ button {
     max-height: 80px;
     margin: 5px;
     font-size: 3.0em;
+}
+
+.btn-submit {
+    display: inline-block;
+    border: 0px solid;
+    border-radius: 6px;
+    background-color: var(--color-links-main);
+    padding: 0;
+    width: 22vw;
+    max-width: 100px;
+    height: 40px;
+
+    overflow: hidden;
+
+    font-size: .9em;
+    font-weight: bold;
+    color: var(--color-bg-main);
+
+    /* hacks right side of box into place */
+    position: relative;
+    right: 0
 }
 
 /* Horizontal Line */
@@ -239,6 +265,7 @@ content {
     width: 100%;
 
     padding: var(--padding-bottom);
+    padding-right: 0px;
 }
 
 /* images & icons */
@@ -279,8 +306,31 @@ aside {
     align-content: space-between;
     flex-wrap: wrap;
     width: 64vw;
-    height: 64vw;
+    height: auto;
     max-width: 270px;
     max-height: 270px;
+}
 
+form {
+    display: block;
+    text-align: right;
+    padding: 0px;
+}
+
+textarea, input {
+    width: 80%;
+    box-shadow: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    font-size: 1em;
+
+    background-color: var(--color-bg-alt);
+    color: var(--color-font-main);
+
+    /* hacks right side of box into place */
+    position: relative;
+    right: -.25em;
 }
