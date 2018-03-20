@@ -43,7 +43,7 @@
                 <!-- <img src="assets/images/headerwave.png" class="image"><img> -->
                 <header class="header-section"><h3>Drew Noll - Junior Dev</h3></header>
 
-                <article class="container-article">
+                <article class="about">
                     <content>
                         <p>Hi! I’m Drew! I‘m a junior software developer from Melbourne, Australia.</p>
                         <br/>
@@ -83,7 +83,7 @@
             </header>
 
                 <header class="header-section"><h3>~/pixelhat/</h3></header>
-                <article class="container-article projects">
+                <article class="projects">
                     <aside><img src="assets/images/pixelhat.png" class="project-img"></aside>
                     <content>
                         <p><a href="https://github.com/oheydrew/pixelhat/" target="_blank">pixelhat</a> (or, as it’s more affectionately known, the ‘<i>crappy doof hat</i>’, ‘<i>space cowboy</i>’, or ‘<i>can you please turn that thing off?</i>’) is an open-source wearable <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels" target="_blank">Neopixel</a> LED project, written in <a href="https://micropython.org/" target="_blank">micropython</a> on an <a href="https://www.espressif.com/en/products/hardware/esp8266ex/overview" target="_blank">ESP-8266</a> microprocessor.</p>
@@ -95,7 +95,7 @@
                 </article>
 
                 <header class="header-section"><h3>~/boogle-books/</h3></header>
-                <article class="container-article projects">
+                <article class="projects">
                     <aside><img src="assets/images/boogle.png" class="project-img"></aside>
                     <content>
                         <p><a href="https://github.com/oheydrew/boogle/" target="_blank">boogle-books</a> is a terminal-based book library & information tool that uses a Google Books API. It’s a simple tool, which allows you to search through the API for titles, and displays the results in a tableized format, with extra single-title information available also.</p>
@@ -120,7 +120,7 @@
                 </header>
                 
                 <header class="header-section"><h3>Get in touch!</h3></header>
-                <article class="container-article">
+                <article class="contact">
                     <aside>
                         <ul class="iconcontainer">
                             <li><a href="https://github.com/oheydrew" target="_blank"><button class="btn-icon btn-link icon-github-contact"><i class="devicon-github-plain"></i></button></a></li>
@@ -130,16 +130,11 @@
                     </aside>
                     <content>
                         <form action="/pages/contact.html" method="get">
-                            <label for="full-name">name ?</label><br/>
-                            <input type="text" name="full-name" />
+                            <input type="text" name="full-name" placeholder="name ?" />
                             <br/>
-            
-                            <label for="email">email ?</label><br/>
-                            <input type="email" name="email" />
+                            <input type="email" name="email" placeholder="email ?" />
                             <br/>
-            
-                            <label for="message">leave a message ?</label><br/>
-                            <textarea name="message" cols="30" rows="2"></textarea>
+                            <textarea name="message" cols="30" rows="2" placeholder="leave a message ?"></textarea>
                             <br/>
                             <input type="submit" value="Send" class="btn-submit"/>
                         </form>

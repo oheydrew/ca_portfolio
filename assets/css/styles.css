@@ -29,6 +29,7 @@ font-family: 'Ubuntu', sans-serif; */
 
     /* animation */
     --animtime-splash: 15s;
+    --animtime-link: 0.2s;
 }
 
                                     /* Body & font defaults */
@@ -53,6 +54,7 @@ a {
 
 a:link {
     color: var(--color-links-main);
+    transition: color var(--animtime-link) ease-in-out;
 }
 
 a:visited {
@@ -82,6 +84,7 @@ button {
     font-size: .9em;
     font-weight: bold;
     color: var(--color-bg-main);
+    transition: background-color var(--animtime-link) ease-in-out;
 }
 
 .btn-menu:hover {
@@ -131,6 +134,7 @@ button {
     font-size: .9em;
     font-weight: bold;
     color: var(--color-bg-main);
+    transition: background-color var(--animtime-link) ease-in-out;
 
     /* hacks right side of box into place */
     position: relative;
@@ -209,6 +213,19 @@ h3 { /* Section Header */
         display: flex;
         justify-content: flex-end !important;
     }
+
+    /* remove drop shadow on wave effect in mobile for speed */
+    .wave {
+        filter: drop-shadow( 20px 0px 6px #456990 );
+    }
+
+    .wave2 {
+        filter: drop-shadow( 15px 0px 3px #BDBDBD );
+    }
+    
+    .wave3 {
+        filter: drop-shadow( 20px 0px 5px #C52233 );
+    }
     
 }
 
@@ -259,7 +276,7 @@ article {
 }
 
 /* flip pics to the right for widescreen */
-article.projects {
+article.projects, article.contact {
     flex-direction: row-reverse;
 }
 
@@ -282,9 +299,13 @@ aside {
 
     padding: var(--padding-bottom);
 }
+                                /* popup navigation menu */
 
+/* .popupcontainer {
+    
+} */
 
-                                        /* navigation menu */
+                                /* linear navigation menu */
 
 .navigation {
     list-style-type: none;
@@ -338,6 +359,15 @@ textarea, input {
     right: -.25em;
 }
 
+input::placeholder, textarea::placeholder {
+    text-align: right;
+    color: var(--color-font-dull);
+}
+
+input:focus, textarea:focus {
+    background-color: var(--color-links-dull);
+}
+
                                 /* Splash Sinewave Animation */
 
 .wavecontainer {
@@ -366,7 +396,7 @@ textarea, input {
   width: 6400px;
   height: 210px;
   animation: sineanim calc(var(--animtime-splash) * 1.0) linear infinite;
-  filter: drop-shadow( 20px 0px 6px #456990 );
+  /* filter: drop-shadow( 20px 0px 6px #456990 ); */
   z-index: 1;
 }
 
@@ -376,7 +406,7 @@ textarea, input {
   width: 6400px;
   height: 210px;
   animation: sineanim calc(var(--animtime-splash) * 0.666) linear infinite;
-  filter: drop-shadow( 15px 0px 3px #BDBDBD );
+  /* filter: drop-shadow( 15px 0px 3px #BDBDBD ); */
   opacity: .4;
 }
 
@@ -386,7 +416,7 @@ textarea, input {
   width: 6400px;
   height: 210px;
   animation: sineanim calc(var(--animtime-splash) * (0.333)) linear infinite;
-  filter: drop-shadow( 20px 0px 5px #C52233 );
+  /* filter: drop-shadow( 20px 0px 5px #C52233 ); */
   opacity: .6;
   
 }
