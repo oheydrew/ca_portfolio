@@ -65,9 +65,7 @@ With these images in mind, I moved into Figma, to start to place colours. I also
 
 I ran into *huge* issues here. It seemed that every image I used, every colour I sampled, they didn't seem to work out well in palette form. I struggled a lot with this process, and spent a long time trying to come to a decision on colour. 
 
-![colorpalettes1](docs/colorpalettes1.png)
-
-![colorpalettes2](docs/colorpalettes2.png)
+![colorpalettes1](docs/colorpalettes1.png)   ![colorpalettes2](docs/colorpalettes2.png)
 
 As you can see, not many of these schemes were very exciting. I toyed a little with lighter themes, though admittedly, probably not enough. I found it was working best with less colours, and eventually settled on a few palettes, and mixed a few together, checking them.
 
